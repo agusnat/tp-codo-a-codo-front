@@ -1,14 +1,8 @@
-const btnReset = document.getElementById("btnReset");
 const btnResumen = document.getElementById("btnResumen");
+const inputCategoria = document.getElementById("inputCategoria");
+const inputCantidad = document.getElementById("inputCantidad");
 
-btnReset.addEventListener("click",(e)=>{
-    document.getElementById("formularioDeCompra").reset();
-});
-
-btnResumen.addEventListener("click",(e)=>{
-    let inputCategoria = document.getElementById("inputCategoria");
-    let inputCantidad = document.getElementById("inputCantidad");
-    
+btnResumen.addEventListener("click",(e)=>{    
     let precioTotal = 200 * inputCantidad.value;
     let precioConDescuento = precioTotal - (precioTotal * (inputCategoria.value / 100));
 
